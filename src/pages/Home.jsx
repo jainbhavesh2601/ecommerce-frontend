@@ -19,7 +19,7 @@ function Home() {
     const fetchData = async () => {
       try {
         // Fetch categories
-        const catRes = await fetch("http://localhost:8000/categories");
+        const catRes = await fetch("https://ecommerce-backend-7jlj.onrender.com/categories");
         if (!catRes.ok) throw new Error("Failed to fetch categories");
         const catResult = await catRes.json();
         const catList = catResult.data || [];
@@ -31,7 +31,7 @@ function Home() {
         setCategories(["All", ...catList.map((c) => c.name)]);
 
         // Fetch products
-        const prodRes = await fetch("http://localhost:8000/products");
+        const prodRes = await fetch("https://ecommerce-backend-7jlj.onrender.com/products");
         if (!prodRes.ok) throw new Error("Failed to fetch products");
         const prodResult = await prodRes.json();
         const prodList = prodResult.data || [];
