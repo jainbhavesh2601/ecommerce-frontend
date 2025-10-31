@@ -1,0 +1,258 @@
+/* Create Invoice Styles */
+.create-invoice-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 24px 0;
+}
+
+.create-invoice-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Header */
+.create-header {
+  margin-bottom: 32px;
+}
+
+.create-header h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.create-subtitle {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* Form Sections */
+.form-section {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+/* Order Selection */
+.order-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-option {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.order-option:hover {
+  border-color: #cbd5e1;
+}
+
+.order-option.selected {
+  border-color: #2563eb;
+  background-color: #eff6ff;
+}
+
+.order-option input[type="radio"] {
+  margin-right: 12px;
+}
+
+.order-info {
+  flex: 1;
+}
+
+.order-main-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.order-title {
+  font-weight: 600;
+  color: #111827;
+  font-size: 16px;
+}
+
+.order-amount {
+  font-weight: 600;
+  color: #111827;
+  font-size: 18px;
+}
+
+.order-details {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Form Fields */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.form-help {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.preview-box {
+  padding: 10px 12px;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #111827;
+}
+
+/* Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.action-button {
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.action-button.secondary {
+  background-color: white;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.action-button.secondary:hover {
+  background-color: #f9fafb;
+}
+
+.action-button.primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.action-button.primary:hover {
+  background-color: #1d4ed8;
+}
+
+.action-button.primary:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 256px;
+}
+
+.loading-spinner {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid #f3f4f6;
+  border-top-color: #2563eb;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error */
+.error-message {
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #991b1b;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 48px 24px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.empty-message {
+  font-size: 18px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.empty-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.empty-button:hover {
+  background-color: #1d4ed8;
+}
+

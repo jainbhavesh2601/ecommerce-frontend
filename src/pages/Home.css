@@ -1,0 +1,247 @@
+/* Global Dark Theme */
+body {
+    background-color: #121212;  /* Dark page background */
+    color: #ddd;                /* Default light text color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Optional: make links stand out */
+  a {
+    color: #f39c12;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  a:hover {
+    color: #e67e22;
+  }
+  
+  /* ---------------- Hero Section ---------------- */
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+    border-radius: 16px;
+    margin: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+  }
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(230, 126, 34, 0.15), transparent 70%);
+    animation: rotateBG 20s linear infinite;
+    z-index: 0;
+  }
+  
+  .hero-content {
+    flex: 1;
+    z-index: 1;
+    animation: fadeInLeft 1s ease forwards;
+  }
+  .hero-section h1 {
+    font-size: 3rem;
+    color: #f39c12; /* bright accent */
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .hero-section p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: #ddd;
+    max-width: 500px;
+  }
+  .hero-btn {
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #e67e22, #f39c12);
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  }
+  .hero-btn:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 8px 25px rgba(230, 126, 34, 0.7);
+    background: linear-gradient(45deg, #f39c12, #e67e22);
+  }
+  .hero-img img {
+    max-width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: fadeInRight 1s ease forwards;
+  }
+  
+  /* ---------------- Categories ---------------- */
+  .categories {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+  }
+  .category-btn {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #e67e22;
+    border-radius: 25px;
+    background: #2c2c2c;
+    color: #ddd;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.4s ease;
+  }
+  .category-btn.active,
+  .category-btn:hover {
+    background: #e67e22;
+    color: #1e1e1e;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(230, 126, 34, 0.5);
+  }
+  
+  /* ---------------- Search ---------------- */
+  .filters {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .search-input {
+    padding: 0.8rem 1rem;
+    width: 60%;
+    max-width: 400px;
+    font-size: 1rem;
+    border-radius: 12px;
+    border: 1px solid #444;
+    background: #2c2c2c;
+    color: #eee;
+    transition: all 0.3s ease;
+  }
+  .search-input::placeholder {
+    color: #bbb;
+  }
+  .search-input:focus {
+    box-shadow: 0 0 12px rgba(230, 126, 34, 0.7);
+    outline: none;
+    border-color: #e67e22;
+  }
+  
+  /* ---------------- Offers ---------------- */
+  .offers {
+    text-align: center;
+    margin: 2rem 0;
+    animation: fadeInUp 1s ease forwards;
+  }
+  .offer-banner {
+    background: linear-gradient(45deg, #f39c12, #e67e22);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #1e1e1e;
+    display: inline-block;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .offer-banner:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  .offer-banner span {
+    color: #ffeb3b;
+  }
+  
+  /* ---------------- Product Grid ---------------- */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+  .product-card {
+    background: #2c2c2c;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    transition: transform 0.4s, box-shadow 0.4s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+    color: #ddd;
+  }
+  .product-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+  }
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+  .product-card img:hover {
+    transform: scale(1.1);
+  }
+  .product-card .product-info {
+    padding: 1rem;
+    text-align: center;
+  }
+  .product-card .product-info h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #f39c12;
+  }
+  .product-card .product-info p {
+    color: #ccc;
+    font-size: 0.95rem;
+    margin: 0.2rem 0;
+  }
+  
+  /* ---------------- Load More ---------------- */
+  .load-more-container {
+    text-align: center;
+    margin: 3rem 0;
+  }
+  .load-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+    color: #1e1e1e;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .load-btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(39, 174, 96, 0.5);
+  }
+  
+  /* ---------------- Animations ---------------- */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes fadeInLeft {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  @keyframes fadeInRight {
+    from { transform: translateX(20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  /* Utility Classes */
+  .fade-in { animation: fadeIn 1.5s ease-in; }
+  .animated-card { opacity: 0; animation: fadeInUp 1s forwards; }

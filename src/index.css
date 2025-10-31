@@ -1,0 +1,43 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: hwb(225 93% 1%);
+  color: #242424;
+  min-height: 100vh;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #0077ff;
+}
+a:hover {
+  color: #005fcc;
+}
+
+/* Buttons */
+button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background-color: #0077ff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #005fcc;
+}
+
+/* Checkout responsive grid */
+@media (max-width: 768px) {
+  .checkout-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
