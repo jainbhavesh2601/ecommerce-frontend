@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Replace with your backend URL
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://ecommerce-backend-7jlj.onrender.com";
 
 const api = axios.create({
   baseURL: BASE_URL,
